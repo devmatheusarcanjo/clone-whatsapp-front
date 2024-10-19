@@ -1,0 +1,19 @@
+@import "./variaveis.css";
+@import "./reset.css";
+@import "./body.css";
+@import "./header.css";
+@import "./main.css";
+@import "./footer.css";
+
+body * :not(.message *) {
+  /* user-select: none; */
+}
+
+
+
+
+
+
+
+
+
