@@ -1,68 +1,62 @@
-main {      
-    gap: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-    padding: 10px;     
-    z-index: 2;     
-    overflow-y: scroll;        
+main {
+  gap: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  z-index: 2;
+  overflow-y: scroll;
 }
 
 .installButton {
-    position: absolute;
-    width: 30%;
-    left: calc(50% - 15%);
-    top: 50%;
+  position: absolute;
+  width: 30%;
+  left: calc(50% - 15%);
+  top: 50%;
 }
 
 .message {
-    padding: 20px;
-    max-width: 70%;        
-    border-radius: 15px;
-    color: var(--corTextoMensagens);
-    position: relative;
-    min-width: 30%;              
+  padding: 20px;
+  max-width: 70%;
+  border-radius: 15px;
+  color: var(--corTextoMensagens);
+  position: relative;
+  min-width: 30%;
+  word-wrap: break-word;
 }
 
 main .container-hora {
-    position: absolute;
-    display: inline-block;
-    right: 5px;
-    bottom: 5px;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    
+  position: absolute;
+  display: inline-block;
+  right: 5px;
+  bottom: 5px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-
-main [user="me"] {
-    align-self: flex-end;
-    background-color: var(--corFundoMensagemLocal);
+main [user='me'] {
+  align-self: flex-end;
+  background-color: var(--corFundoMensagemLocal);
 }
 
 main .check {
-    font-style: bold;
+  font-style: bold;
 }
-
 
 main .nome-usuario {
-    position: absolute;
-    display: inline-block;
-    left: 10px;
-    top: 5px;
-    font-size: 0.8rem;
-    color: green;
+  position: absolute;
+  display: inline-block;
+  left: 10px;
+  top: 5px;
+  font-size: 0.8rem;
+  color: green;
 }
 
-
-
-
-main [user="outer"] {
-    align-self: flex-start;
-    background-color: white;
+main [user='outer'] {
+  align-self: flex-start;
+  background-color: white;
 }
-
