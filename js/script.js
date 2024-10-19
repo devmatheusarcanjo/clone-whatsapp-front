@@ -1,4 +1,4 @@
-const enderecoServer = '192.168.10.18:3000';
+const enderecoServer = 'https://clone-whatsapp-backend-1.onrender.com';
 const main = document.querySelector('#main');
 const chat = document.querySelector('.chat-home');
 const nomeHtml = document.getElementById('nome');
