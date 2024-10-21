@@ -1,0 +1,45 @@
+.popup-iniciando-servidor {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 60%;
+  height: 20%;
+  left: calc(50% - 30%);
+  top: calc(50% - 10%);
+  background-color: rgba(255, 255, 255, 05);
+  /* box-shadow: 0 0 10px #4fca5e; */
+  border-radius: 20px;
+  gap: 20px;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.popup-iniciando-servidor {
+  text-align: center;
+}
+
+.animacao-iniciando-servidor {
+  min-width: 50px;
+  min-height: 50px;
+  position: relative;
+
+  border: solid 2px transparent;
+  border-top: solid 2px black;
+  border-radius: 50vw;
+
+  animation-name: animacao-iniciando-servidor;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+@keyframes animacao-iniciando-servidor {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

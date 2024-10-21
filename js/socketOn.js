@@ -1,7 +1,42 @@
 /// OUVINTES SOCKET.IO
 
+// Verificar status do servidor
+const popupAguardando = document.getElementById('popup-iniciando-servidor');
+fetch(`${enderecoServer}/ping`)
+  .then((e) => {
+    return e.json();
+  })
+  .then((e) => {
+    console.log(e);
+    if (e) {
+      popupAguardando.style.display = 'none';
+    }
+  })
+  .catch((erro) => {
+    console.error(erro);
+
+    popupAguardando.querySelectorAll('*').forEach((elemento) => {
+      const id = elemento.id;
+
+      if (id !== 'popup-iniciando-servidor-titulo') {
+        elemento.style.display = 'none';
+      }
+
+      if (id === 'popup-iniciando-servidor-titulo') {
+        elemento.textContent =
+          'Nosso servidor esta desativado no momento, não sera possivel enviar mensagens';
+      }
+    });
+  });
+
 /// Iniciando a comunicação
 const socket = io(`${enderecoServer}/grupo`);
+
+socket.on('connect', () => {
+  popupAguardando.style.display = 'none';
+});
+
+console.log(socket);
 
 /// Ouvir eventos da rota mendagemServidor
 socket.on('novaMensagem', (msg) => {

@@ -1,19 +1,11 @@
-@import "./variaveis.css";
-@import "./reset.css";
-@import "./body.css";
-@import "./header.css";
-@import "./main.css";
-@import "./footer.css";
+@import './variaveis.css';
+@import './reset.css';
+@import './body.css';
+@import './header.css';
+@import './main.css';
+@import './footer.css';
+@import './popup-iniciando-servidor.css';
 
 body * :not(.message *) {
   /* user-select: none; */
 }
-
-
-
-
-
-
-
-
-
